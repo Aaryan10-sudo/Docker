@@ -1,0 +1,19 @@
+{
+  "name": "learndocker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "docker:build": "docker build -t learndocker:latest.",
+    "docker:run": "docker run -d -p 3000:3000 learndocker:latest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

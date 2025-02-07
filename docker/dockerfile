@@ -1,0 +1,20 @@
+# Use an official Node.js image
+FROM node:18-alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json first (helps with caching)
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy remaining files
+COPY . .
+
+# Expose the port (assuming your app runs on port 4000)
+EXPOSE 4000
+
+# Command to run the app
+ENTRYPOINT ["node", "index.js"]
