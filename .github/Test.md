@@ -3,5 +3,5 @@
 ### Try Running my docker image
 
 ```bash
-docker run -it aaryanimage
+docker run -it lazyfox916/test-docker
 ```
